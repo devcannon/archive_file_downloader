@@ -1,0 +1,38 @@
+# From here on there must not be any empty values in this configuration
+temp_path = "temp"
+delete_after_extract = true
+download_both_platforms = false
+
+[download_override]
+# Comment the following line to use platform detection
+# "url" = "url_linux"
+
+[[tool]]
+name = "protoc"
+url_win64 = "https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-win64.zip"
+url_linux = "https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-x86_64.zip"
+extract_to = "output/protoc"
+
+[[tool]]
+name = "ninja"
+url_win64 = "https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-win.zip"
+url_linux = "https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-linux.zip"
+extract_to = "output/ninja"
+
+[[tool]]
+name = "ccache"
+url_win64 = "https://github.com/ccache/ccache/releases/download/v4.9/ccache-4.9-windows-x86_64.zip"
+url_linux = "https://github.com/ccache/ccache/releases/download/v4.9/ccache-4.9-linux-x86_64.tar.xz"
+extract_to = "output/ccache"
+
+[[tool]]
+name = "openocd"
+url_win64 = "https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v0.12.0-2/xpack-openocd-0.12.0-2-win32-x64.zip"
+url_linux = "https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v0.12.0-2/xpack-openocd-0.12.0-2-linux-x64.tar.gz"
+extract_to = "output/openocd"
+
+[[tool]]
+name = "arm-none-eabi"
+url_win64 = "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-mingw-w64-i686-arm-none-eabi.zip"
+url_linux = "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi.tar.xz"
+extract_to = "output/arm-none-eabi"
